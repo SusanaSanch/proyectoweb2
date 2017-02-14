@@ -28,6 +28,7 @@ public class EscuchaInicioFin implements ServletContextListener {
     	System.out.println("Programa destruido.");
     	System.out.println("Programa destruido.");
     	System.out.println("Programa destruido.");
+    	MainSSH.desconectate_D_SSH();
     }
 
 	/**
@@ -39,6 +40,12 @@ public class EscuchaInicioFin implements ServletContextListener {
     	System.out.println("Programa iniciado.");
     	System.out.println("Programa iniciado.");
     	System.out.println("Programa iniciado.");
+    	try {
+			MainSSH.conectate_A_SSH();
+		} catch (Throwable e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
     	
     }
 	

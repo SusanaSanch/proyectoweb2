@@ -60,7 +60,7 @@ public class PatologiaDAO {
 		{
 			conectate_A_SSH();
 			
-			DriverManager.registerDriver (new com.mysql.cj.jdbc.Driver());// método equivalente al anterior
+			DriverManager.registerDriver (new com.mysql.jdbc.Driver());// método equivalente al anterior
 			//Sea como sea, es, <<oye, si te piden una conexión, se la pides a esa clase!>>
 			conn = DriverManager.getConnection (cadena_conexion, user, password);
   	        stmt = conn.createStatement();
